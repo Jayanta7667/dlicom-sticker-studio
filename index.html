@@ -1,23 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DliCOM Sticker Studio</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>DliCOM Mascot Sticker Maker</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#06102c,#101f52);color:#fff;font-family:Arial,sans-serif;padding:14px}.app{max-width:1120px;margin:auto}h1{text-align:center;margin:8px 0 3px;font-size:clamp(28px,7vw,46px)}.sub{text-align:center;color:#a9b8df;margin:0 0 16px}.tabs{display:flex;gap:7px;overflow:auto;margin-bottom:12px}.tabs button,.bar button{border:1px solid #34519a;background:#0b1940;color:#fff;border-radius:10px;padding:10px 13px;font-weight:800;white-space:nowrap}.tabs .active,.bar .primary{background:#2f6bff}.layout{display:grid;grid-template-columns:310px 1fr;gap:14px}.panel,.stage{background:#081433ee;border:1px solid #29447f;border-radius:18px;padding:13px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;max-height:520px;overflow:auto}.asset{aspect-ratio:1;background:#050b1d;border:1px solid #29447f;border-radius:11px;padding:2px;cursor:pointer}.asset img{width:100%;height:100%;object-fit:contain}.empty{text-align:center;color:#8296c4;font-size:12px;padding:24px 8px;grid-column:1/-1}.sheet{margin-top:10px;border:1px dashed #5e8dff;border-radius:12px;padding:11px;text-align:center;font-size:12px;color:#b9c8ea}.sheet input{width:100%;margin-top:8px}.row{display:flex;gap:6px;margin-top:8px}.row input{width:50%;background:#07112e;color:white;border:1px solid #34519a;border-radius:8px;padding:8px}.bar{display:flex;gap:7px;flex-wrap:wrap}.canvasWrap{margin-top:11px;padding:14px;display:grid;place-items:center;border-radius:15px;background:repeating-conic-gradient(#eee 0 25%,#fff 0 50%) 50%/24px 24px}.canvas{width:min(700px,100%);aspect-ratio:1;position:relative;overflow:hidden}.layer{position:absolute;left:50%;top:50%;width:35%;transform:translate(-50%,-50%);cursor:grab;touch-action:none}.layer img{display:block;width:100%;pointer-events:none}.selected{outline:2px solid #5e8dff;outline-offset:4px}.hint{font-size:11px;color:#879ac7;margin-top:10px;line-height:1.5}@media(max-width:760px){.layout{grid-template-columns:1fr}.grid{max-height:300px}}
+*{box-sizing:border-box}body{margin:0;background:#020711;color:#fff;font-family:Inter,Arial,sans-serif}.app{max-width:1240px;margin:auto;padding:16px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.brand{display:flex;align-items:center;gap:9px}.brand img{width:42px;height:42px;object-fit:contain}.brand b{font-size:18px}.brand small{display:block;color:#7288b7;font-size:9px;letter-spacing:2px}.btn{border:1px solid #23427a;background:#081633;color:#fff;border-radius:10px;padding:10px 13px;font-weight:800;cursor:pointer}.primary{background:#2f6bff!important;border-color:#5e8dff!important}.hero{text-align:center;margin:5px 0 16px}.hero h1{font-size:clamp(27px,5vw,46px);margin:0;font-weight:950}.hero h1 span{color:#2f6bff}.hero p{color:#8297c4;margin:6px 0}.layout{display:grid;grid-template-columns:265px minmax(330px,1fr) 245px;gap:12px}.panel,.stage{background:#07132c;border:1px solid #1d3a70;border-radius:17px;padding:12px}.section-title{font-size:10px;color:#6f86b6;letter-spacing:1.2px;font-weight:900;margin:4px 2px 9px;text-transform:uppercase}.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px}.tab{border:1px solid #24447f;background:#091a3c;color:#dbe6ff;border-radius:9px;padding:9px 5px;font-size:11px;font-weight:850}.tab.active{background:#2f6bff;border-color:#5e8dff}.asset-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:8px;max-height:420px;overflow:auto}.asset{aspect-ratio:1;background:#030a18;border:1px solid #1f3e77;border-radius:10px;padding:4px;cursor:pointer}.asset:hover{border-color:#5e8dff}.asset img{width:100%;height:100%;object-fit:contain}.empty{grid-column:1/-1;color:#7289ba;text-align:center;padding:25px 6px;font-size:11px}.tools{display:flex;gap:6px;flex-wrap:wrap}.tools .btn{flex:1;min-width:65px}.canvas-wrap{margin-top:10px;padding:15px;border-radius:15px;background:repeating-conic-gradient(#101a2e 0 25%,#0a1325 0 50%) 50%/22px 22px;display:grid;place-items:center}.canvas{width:min(640px,100%);aspect-ratio:1;position:relative;overflow:hidden}.layer{position:absolute;left:50%;top:50%;width:40%;transform:translate(-50%,-50%);cursor:grab;touch-action:none;user-select:none}.layer img{display:block;width:100%;height:auto;pointer-events:none}.layer.selected{outline:2px solid #5e8dff;outline-offset:5px;border-radius:8px}.text-layer{width:auto!important;white-space:nowrap;color:#fff;font-weight:950;font-size:38px;text-shadow:0 4px 0 #1d49c9}.hint{font-size:10px;line-height:1.5;color:#7188b7;margin-top:9px}.preview{aspect-ratio:1;border-radius:12px;background:repeating-conic-gradient(#eee 0 25%,#fff 0 50%) 50%/18px 18px;display:grid;place-items:center;overflow:hidden}.preview img{max-width:100%;max-height:100%;object-fit:contain}.info{background:#091a3c;border:1px solid #1d3c72;border-radius:12px;padding:10px;margin-top:8px}.info b{font-size:12px}.info small{display:block;color:#7188b7;margin-top:4px}.download{width:100%;border:0;border-radius:10px;background:#2f6bff;color:#fff;padding:11px;font-weight:900;margin-top:8px}.pack{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;max-height:260px;overflow:auto}.pack-item{background:#030918;border:1px solid #1b386d;border-radius:9px;padding:3px}.pack-item img{width:100%;display:block}.text-row{display:flex;gap:5px}.text-row input{min-width:0;flex:1;background:#030a18;border:1px solid #27477e;color:#fff;border-radius:8px;padding:8px}.upload{width:100%;font-size:10px;color:#a9b8d9}.source{font-size:9px;color:#6178a9;margin-top:6px}@media(max-width:950px){.layout{grid-template-columns:220px 1fr}.right{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px}}@media(max-width:680px){.app{padding:9px}.layout{grid-template-columns:1fr}.right{grid-column:auto;display:block}.asset-grid{max-height:260px}.hero{margin-bottom:10px}}
 </style>
 </head>
 <body>
 <div class="app">
-<h1>DliCOM Sticker Studio</h1>
-<p class="sub">Build stickers from the DliCOM mascot, text, gear and logo.</p>
-<div class="tabs">
-<button class="active" data-c="mascot">Mascot Poses</button><button data-c="base">Mascot Base</button><button data-c="text">Text</button><button data-c="gear">Accessories & Gear</button><button data-c="logo">Logo</button>
-</div>
+<header class="top"><div class="brand"><img src="dlicom-logo.png"><div><b>DliCOM</b><small>COMMUNITY</small></div></div><button class="btn" id="clear">Clear</button></header>
+<section class="hero"><h1>DliCOM Mascot <span>Sticker Maker</span></h1><p>Create. Customize. Download. Share Everywhere.</p></section>
 <div class="layout">
-<aside class="panel"><div id="grid" class="grid"></div>
-<div class="sheet"><b>Import another sticker sheet</b><br>Optional manual import. Choose the category, upload a sheet, set columns/rows, then split it.<input id="sheetFile" type="file" accept="image/png,image/jpeg,image/webp"><div class="row"><input id="cols" type="number" min="1" value="3" placeholder="Columns"><input id="rows" type="number" min="1" value="2" placeholder="Rows"></div><button style="margin-top:8px;width:100%;border:0;border-radius:8px;padding:9px;background:#2f6bff;color:#fff;font-weight:900" id="split">Split & Add</button></div></aside>
-<main class="stage"><div class="bar"><button class="primary" id="addText">Add Text</button><button id="small">− Size</button><button id="big">+ Size</button><button id="del">Delete</button><button class="primary" id="export">Export Transparent PNG</button></div><div class="canvasWrap"><div id="canvas" class="canvas"></div></div><div class="hint">Your 5 DliCOM sheets are loaded automatically. Tap an asset to add it, drag to move, resize or delete. Export creates a transparent PNG.</div></main>
+<aside class="panel">
+<div class="section-title">1. Choose expression</div>
+<div class="tabs"><button class="tab active" data-cat="mascot">Mascot</button><button class="tab" data-cat="base">Base</button><button class="tab" data-cat="text">Text</button><button class="tab" data-cat="gear">Gear</button><button class="tab" data-cat="logo">Logo</button></div>
+<div id="assets" class="asset-grid"></div>
+<div class="section-title" style="margin-top:12px">2. Add text</div>
+<div class="text-row"><input id="textInput" value="GM DliCOM!"><button class="btn primary" id="addText">+</button></div>
+<div class="section-title" style="margin-top:12px">3. Your image</div>
+<input id="upload" class="upload" type="file" accept="image/png,image/jpeg,image/webp">
+</aside>
+<main class="stage">
+<div class="tools"><button class="btn" id="smaller">− Size</button><button class="btn" id="bigger">+ Size</button><button class="btn" id="rotate">Rotate</button><button class="btn" id="delete">Delete</button><button class="btn primary" id="download">Download PNG</button></div>
+<div class="canvas-wrap"><div id="canvas" class="canvas"></div></div>
+<div class="hint">Tap an asset to add it. Drag to move. Resize, rotate or delete. The checkerboard is transparent and will not appear in the downloaded PNG.</div>
+</main>
+<aside class="panel">
+<div class="section-title">Sticker info</div><div class="preview" id="preview"></div>
+<div class="info"><b>DliCOM Sticker</b><small>512 × 512 px · PNG · Transparent</small></div>
+<button class="download" id="download2">DOWNLOAD PNG</button>
+<div class="section-title" style="margin-top:13px">My sticker pack</div><div id="pack" class="pack"></div>
+<div class="source">Assets are loaded directly from this repository. Sheets are separated by their real transparent sticker areas, not displayed as ugly rectangular crops.</div>
+</aside>
 </div></div>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script>
@@ -29,23 +44,22 @@ const SHEETS=[
  {cat:'gear',file:'accessories-gear.png',cols:4,rows:4},
  {cat:'logo',file:'dlicom-logo.png',cols:1,rows:1}
 ];
-let cat='mascot',sel=null,z=1;
-const grid=document.getElementById('grid'),canvas=document.getElementById('canvas');
-function render(){grid.innerHTML=A[cat].length?A[cat].map((x,i)=>`<button class="asset" title="${x.name}" onclick="add(${i})"><img src="${x.src}" alt="${x.name}"></button>`).join(''):'<div class="empty">Loading assets…</div>'}
-document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');cat=b.dataset.c;render()});
-function select(e){if(sel)sel.classList.remove('selected');sel=e;if(e)e.classList.add('selected')}
-function add(i){const x=A[cat][i],e=document.createElement('div');e.className='layer';e.style.zIndex=++z;e.innerHTML=`<img src="${x.src}" alt="">`;e.onclick=q=>{q.stopPropagation();select(e)};drag(e);canvas.appendChild(e);select(e)}
-canvas.onclick=()=>select(null);
-function drag(e){let sx=0,sy=0,l=0,t=0,down=false;e.onpointerdown=q=>{down=true;select(e);sx=q.clientX;sy=q.clientY;l=e.offsetLeft;t=e.offsetTop;e.setPointerCapture(q.pointerId)};e.onpointermove=q=>{if(down){e.style.left=(l+q.clientX-sx)+'px';e.style.top=(t+q.clientY-sy)+'px'}};e.onpointerup=()=>down=false;e.onpointercancel=()=>down=false}
-function resize(k){if(sel)sel.style.width=Math.max(12,Math.min(90,parseFloat(sel.style.width||35)+k))+'%'}
-document.getElementById('small').onclick=()=>resize(-5);document.getElementById('big').onclick=()=>resize(5);document.getElementById('del').onclick=()=>{if(sel){sel.remove();sel=null}};
-document.getElementById('addText').onclick=()=>{const t=prompt('Sticker text','GM DliCOM');if(!t)return;const e=document.createElement('div');e.className='layer';e.style.width='auto';e.style.fontSize='36px';e.style.fontWeight='900';e.style.color='#fff';e.style.textShadow='0 3px 0 #1d49c9';e.style.whiteSpace='nowrap';e.style.zIndex=++z;e.textContent=t;e.onclick=q=>{q.stopPropagation();select(e)};drag(e);canvas.appendChild(e);select(e)};
-function transparentDataURL(cv){const ctx=cv.getContext('2d'),d=ctx.getImageData(0,0,cv.width,cv.height),p=d.data;for(let i=0;i<p.length;i+=4){if(p[i]<22&&p[i+1]<22&&p[i+2]<22){p[i+3]=0}}ctx.putImageData(d,0,0);return cv.toDataURL('image/png')}
-function splitImage(im,cols,rows,cat,prefix){const w=im.naturalWidth/cols,h=im.naturalHeight/rows;for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){const cv=document.createElement('canvas');cv.width=Math.ceil(w);cv.height=Math.ceil(h);cv.getContext('2d').drawImage(im,c*w,r*h,w,h,0,0,w,h);A[cat].push({src:transparentDataURL(cv),name:`${prefix}-${r*cols+c+1}`})}}
-function loadSheet(s){return new Promise(resolve=>{const im=new Image();im.onload=()=>{splitImage(im,s.cols,s.rows,s.cat,s.cat);resolve()};im.onerror=()=>resolve();im.src=s.file+'?v=1'})}
-Promise.all(SHEETS.map(loadSheet)).then(()=>render());
-document.getElementById('split').onclick=()=>{const f=document.getElementById('sheetFile').files[0];const cols=Math.max(1,+document.getElementById('cols').value||1),rows=Math.max(1,+document.getElementById('rows').value||1);if(!f)return alert('Choose a sheet first.');const im=new Image();im.onload=()=>{splitImage(im,cols,rows,cat,'custom');render()};im.src=URL.createObjectURL(f)};
-document.getElementById('export').onclick=async()=>{if(!canvas.children.length)return alert('Add a sticker first.');select(null);const shot=await html2canvas(canvas,{backgroundColor:null,scale:3});const a=document.createElement('a');a.download='dlicom-sticker.png';a.href=shot.toDataURL('image/png');a.click()};
-render();
-</script>
-</body></html>
+let cat='mascot',selected=null,z=1;
+const assets=document.getElementById('assets'),canvas=document.getElementById('canvas'),preview=document.getElementById('preview'),pack=document.getElementById('pack');
+function render(){assets.innerHTML=A[cat].length?A[cat].map((x,i)=>`<button class="asset" onclick="addAsset('${cat}',${i})"><img src="${x.src}" alt="${x.name}"></button>`).join(''):'<div class="empty">Loading assets…</div>'}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');cat=b.dataset.cat;render()});
+function select(e){if(selected)selected.classList.remove('selected');selected=e;if(e)e.classList.add('selected');updatePreview()}
+function addAsset(key,i){const x=A[key][i];makeImageLayer(x.src)}
+function makeImageLayer(src){const e=document.createElement('div');e.className='layer';e.style.zIndex=++z;e.innerHTML=`<img src="${src}">`;e.onclick=q=>{q.stopPropagation();select(e)};drag(e);canvas.appendChild(e);select(e)}
+function drag(e){let down=false,sx=0,sy=0,l=0,t=0;e.onpointerdown=q=>{down=true;select(e);sx=q.clientX;sy=q.clientY;l=e.offsetLeft;t=e.offsetTop;e.setPointerCapture(q.pointerId)};e.onpointermove=q=>{if(down){e.style.left=l+q.clientX-sx+'px';e.style.top=t+q.clientY-sy+'px'}};e.onpointerup=()=>{down=false;updatePreview()};e.onpointercancel=()=>down=false}
+function resize(d){if(selected&&!selected.classList.contains('text-layer')){selected.style.width=Math.max(12,Math.min(90,parseFloat(selected.style.width||40)+d))+'%';updatePreview()}}
+document.getElementById('smaller').onclick=()=>resize(-5);document.getElementById('bigger').onclick=()=>resize(5);document.getElementById('rotate').onclick=()=>{if(!selected)return;const r=(+(selected.dataset.r||0)+15)%360;selected.dataset.r=r;selected.style.rotate=r+'deg';updatePreview()};document.getElementById('delete').onclick=()=>{if(selected){selected.remove();selected=null;updatePreview()}};document.getElementById('clear').onclick=()=>{canvas.innerHTML='';selected=null;updatePreview()};canvas.onclick=()=>select(null);
+document.getElementById('addText').onclick=()=>{const t=document.getElementById('textInput').value.trim();if(!t)return;const e=document.createElement('div');e.className='layer text-layer';e.textContent=t;e.style.zIndex=++z;e.onclick=q=>{q.stopPropagation();select(e)};drag(e);canvas.appendChild(e);select(e)};
+document.getElementById('upload').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>makeImageLayer(r.result);r.readAsDataURL(f)};
+function updatePreview(){preview.innerHTML='';const source=selected?.querySelector('img')||canvas.querySelector('img');if(source){const p=new Image();p.src=source.src;preview.appendChild(p)}pack.innerHTML=[...canvas.querySelectorAll('.layer img')].map(x=>`<div class="pack-item"><img src="${x.src}"></div>`).join('')}
+function makeCleanCell(im,x,y,w,h){const cv=document.createElement('canvas');cv.width=Math.round(w);cv.height=Math.round(h);const ctx=cv.getContext('2d');ctx.drawImage(im,x,y,w,h,0,0,cv.width,cv.height);const d=ctx.getImageData(0,0,cv.width,cv.height),p=d.data;let minX=cv.width,minY=cv.height,maxX=-1,maxY=-1;for(let yy=0;yy<cv.height;yy++)for(let xx=0;xx<cv.width;xx++){const i=(yy*cv.width+xx)*4,a=p[i+3],dark=p[i]<24&&p[i+1]<24&&p[i+2]<24;if(a>18&&!dark){if(xx<minX)minX=xx;if(yy<minY)minY=yy;if(xx>maxX)maxX=xx;if(yy>maxY)maxY=yy}}if(maxX<0)return null;const pad=10;minX=Math.max(0,minX-pad);minY=Math.max(0,minY-pad);maxX=Math.min(cv.width-1,maxX+pad);maxY=Math.min(cv.height-1,maxY+pad);const out=document.createElement('canvas');out.width=maxX-minX+1;out.height=maxY-minY+1;out.getContext('2d').drawImage(cv,minX,minY,out.width,out.height,0,0,out.width,out.height);return out.toDataURL('image/png')}
+function loadSheet(s){const im=new Image();im.onload=()=>{A[s.cat]=[];const w=im.naturalWidth/s.cols,h=im.naturalHeight/s.rows;for(let r=0;r<s.rows;r++)for(let c=0;c<s.cols;c++){const src=makeCleanCell(im,c*w,r*h,w,h);if(src)A[s.cat].push({src,name:s.cat+'-'+(A[s.cat].length+1)})}render()};im.src=s.file+'?v=3'}
+SHEETS.forEach(loadSheet);render();
+async function exportPNG(){if(!canvas.children.length)return alert('Add a sticker first.');select(null);const shot=await html2canvas(canvas,{backgroundColor:null,scale:3});const a=document.createElement('a');a.download='dlicom-sticker.png';a.href=shot.toDataURL('image/png');a.click()}
+document.getElementById('download').onclick=exportPNG;document.getElementById('download2').onclick=exportPNG;
+</script></body></html>
